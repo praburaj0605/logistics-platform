@@ -35,7 +35,7 @@ services:
   frontend:
     build: ./frontend
     container_name: logistics_frontend
-    command: npm run dev -- --host
+    command:  npx vite --host
     volumes:
       - ./frontend:/frontend
     ports:
