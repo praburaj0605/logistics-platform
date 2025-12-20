@@ -14,14 +14,16 @@ class Client(Base):
     status = Column(String(20), nullable=False, default="active")
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-class Enquiry(Base):
-    __tablename__ = "enquiries"
+###
+###class Enquiry(Base):
+###    __tablename__ = "enquiries"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    client_id = Column(UUID(as_uuid=True), ForeignKey("clients.id"), nullable=False)
-    origin = Column(String(50))
-    destination = Column(String(50))
-    status = Column(String(30), default="new")
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
+###    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+###    client_id = Column(UUID(as_uuid=True), ForeignKey("clients.id"), nullable=False)
+###    origin = Column(String(50))
+###    destination = Column(String(50))
+###    status = Column(String(30), default="new")
+###    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    client = relationship("Client")
+#    client = relationship("Client")
+###
